@@ -1,5 +1,4 @@
 import { defineChain } from "thirdweb";
-import { HederaTestnet } from "@thirdweb-dev/chains";
 
 // Torus Mainnet configuration
 export const torusMainnetConfig = {
@@ -62,29 +61,6 @@ export const titanAITestnetConfig = {
     },
   },
 };
-export const hederaTestnetConfig = {
-  id: 296,
-  name: "Hedera TestNet",
-  nativeCurrency: {
-    decimals: 18,
-    name: "Hedera",
-    symbol: "HBAR",
-  },
-  rpcUrls: {
-    default: {
-      http: [
-        `https://296.rpc.thirdweb.com/${process.env.NEXT_PUBLIC_THIRDWEB_SECRET_KEY}`,
-      ],
-    },
-  },
-  blockExplorers: {
-    default: {
-      name: "HashScan",
-      url: "https://hashscan.io/testnet",
-    },
-  },
-  testnet: true,
-};
 
 // Polygon Amoy Testnet configuration
 export const amoyTestnetConfig = {
@@ -128,7 +104,6 @@ export const amoyTestnetConfig = {
 
 export const torusMainnet = defineChain(torusMainnetConfig);
 export const titanAITestnet = defineChain(titanAITestnetConfig);
-export const hederaTestnet = defineChain(hederaTestnetConfig);
 export const amoyTestnet = defineChain(amoyTestnetConfig);
 
 // Map of chain IDs to defined chain objects
