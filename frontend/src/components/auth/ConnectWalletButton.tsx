@@ -6,15 +6,13 @@ import {
   titanAITestnetConfig,
   torusMainnet,
   torusMainnetConfig,
-  hederaTestnetConfig,
-  hederaTestnet,
 } from "@/utils/chains";
 import { client } from "@/lib/thirdweb";
 
 export function ConnectWalletButton() {
   return (
     <ConnectButton
-      chain={hederaTestnet}
+      chain={titanAITestnet}
       client={client}
       theme={darkTheme({
         colors: {
