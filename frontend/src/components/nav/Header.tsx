@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 
 import { useActiveAccount } from "thirdweb/react";
 import { ConnectWalletButton } from "../auth/ConnectWalletButton";
+import TopUp from "../TopUp";
 
 export default function Header() {
   const account = useActiveAccount();
@@ -46,6 +47,11 @@ export default function Header() {
           </div>
 
           {/* User Profile */}
+          <div>
+            <div>
+              <TopUp />
+            </div>
+          </div>
           <div className="flex items-center gap-3 py-3 px-4 bg-[#191919] rounded-[20px] cursor-pointer hover:bg-[#2B2B2B] transition-colors">
             <div className="flex items-center gap-3">
               {/* User Avatar */}
